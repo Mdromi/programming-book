@@ -5,9 +5,10 @@ public class Flight {
     private int totalCheckedBags;
     private int totalPassengers;
 
+    
     public void addOnePassenger(int bags, int carryOns) {
         int totalBags = bags;
-        if(carryOns > 2) {
+        if (carryOns > 2) {
             totalBags = bags + carryOns - 2;
         }
         addOnePassenger(totalBags);
@@ -21,7 +22,7 @@ public class Flight {
     }
 
     private boolean isSeatAvailable() {
-        return totalPassengers < TOTAL_SEATING_CAPACITY;
+        return totalCheckedBags < TOTAL_SEATING_CAPACITY;
     }
 
     public void addOnePassenger() {
@@ -37,6 +38,7 @@ public class Flight {
     public int getTotalPassengers() {
         return totalPassengers;
     }
+
     public static void main(String[] args) {
         Flight flight = new Flight();
         flight.addOnePassenger();

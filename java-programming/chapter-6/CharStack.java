@@ -17,7 +17,7 @@ public class CharStack {
     }
 
     public void push(char c) {
-        if(isFull()) {
+        if (isFull()) {
             grow();
         }
         elements[count] = c;
@@ -44,7 +44,7 @@ public class CharStack {
 
     public void printElements() {
         StringJoiner joiner = new StringJoiner(", ", "[", "]");
-        for (int i = 0; i < count; i++) {
+        for(int i = 0; i < count; i++) {
             joiner.add(String.valueOf(elements[i]));
         }
         System.out.println(joiner);
