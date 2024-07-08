@@ -4,6 +4,7 @@
 # Log file
 *.log
 Test.java
+out
 
 # BlueJ files
 *.ctxt
